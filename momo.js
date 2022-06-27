@@ -69,8 +69,8 @@ app.post('/payment', (req, res) => {
     var requestId = partnerCode + new Date().getTime();
     var orderId = requestId;
     var orderInfo = "Thanh toan momo san pham " + info;
-    var redirectUrl = "https://momo-ec09.herokuapp.com//returnUrl";
-    var ipnUrl = "https://momo-ec09.herokuapp.com//notifyUrl";
+    var redirectUrl = "https://momo-ec09.herokuapp.com/returnUrl";
+    var ipnUrl = "https://momo-ec09.herokuapp.com/notifyUrl";
     // var ipnUrl = redirectUrl = "https://webhook.site/454e7b77-f177-4ece-8236-ddf1c26ba7f8";
     var amount = price;
     var requestType = "captureWallet"
