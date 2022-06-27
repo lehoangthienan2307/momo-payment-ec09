@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
 })
 
 app.get('/returnUrl', (req, res) => {
-    console.log('user hit the returnUrl')
+    
     var {resultCode} = req.query;
     if (resultCode == 0)
     {
@@ -49,18 +49,18 @@ app.get('/returnUrl', (req, res) => {
 })*/
 
 app.get('/notifyUrl', (req, res) => {
-    console.log('user hit the notifyUrl')
+    
     res.status(200).send('Thanh toan thanh cong')
 })
 
 app.post('/notifyUrl', (req, res) => {
-    console.log('user hit the notifyUrl')
+   
     res.status(200).send("ok")
 })
 
 
 app.post('/payment', (req, res) => {
-    console.log('user hit the payment')
+    
     var {price, info} = req.query;
     console.log(price);
     var partnerCode = "MOMO6ORU20220626";
@@ -142,7 +142,7 @@ app.post('/payment', (req, res) => {
     });
     // write data to request body
     
-    console.log("Sending....")
+    console.log("Sending.....")
     req.write(requestBody);
     
     req.end();
