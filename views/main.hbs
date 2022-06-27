@@ -1,0 +1,39 @@
+<section class="section-products">
+		<div class="container">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header">
+										<h3>Featured Product</h3>
+										<h2>Popular Products</h2>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						
+						
+						{{#each products}}
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-4" class="single-product">
+										<div class="part-1" style="background: url({{this.image}}) no-repeat center; background-size: cover">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">{{this.name}}</h3>
+												
+												<h4 class="product-price">{{this.price}} VND</h4>
+										</div>
+										<form action="/payment?price={{this.price}}&info={{this.name}}" method="post">
+											<button type="submit" class="btn btn-primary btn-sm">BUY</button>
+										</form>
+								</div>
+						</div>
+						{{/each}}
+						
+						
+				</div>
+		</div>
+</section>
